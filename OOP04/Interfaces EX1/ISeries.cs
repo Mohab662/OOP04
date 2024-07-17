@@ -8,6 +8,7 @@ namespace OOP04.Interfaces
 {
     internal interface ISeries
     {
+        
         // 1. Signature For Property
         public int Current { get; set; }
 

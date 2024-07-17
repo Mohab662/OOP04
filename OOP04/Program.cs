@@ -1,4 +1,5 @@
 ﻿using OOP04.Interfaces;
+using OOP04.Interfaces_EX2;
 
 namespace OOP04
 {
@@ -21,11 +22,20 @@ namespace OOP04
         static void Main(string[] args)
         {
             #region Interface - Example 02
-            //SeriesByTwo seriesByTwo = new SeriesByTwo();
-            //SeriesByThree seriesByThree = new SeriesByThree();
-            //Print10NumberFromSeries(seriesByTwo);
-            //Print10NumberFromSeries(seriesByThree); 
+            SeriesByTwo seriesByTwo = new SeriesByTwo();
+            SeriesByThree seriesByThree = new SeriesByThree();
+            Print10NumberFromSeries(seriesByTwo);
+            Print10NumberFromSeries(seriesByThree);
             #endregion
+            AirPlane airPlane = new AirPlane();
+            IMovable movable = new AirPlane();
+            IFlyable flyable = new AirPlane();
+            movable.Forward();
+            flyable.Forward();
+
+
+
+
         }
     }
 }
