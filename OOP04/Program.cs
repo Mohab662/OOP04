@@ -2,6 +2,7 @@
 using OOP04.Interfaces;
 using OOP04.Interfaces_EX2;
 using OOP04.Interfaces_Q01;
+using OOP04.Interfaces_Q02;
 
 namespace OOP04
 {
@@ -279,8 +280,14 @@ namespace OOP04
 
             #region Question 02:
 
+            //IAuthenticationService authenticationService = new BasicAuthenticationService("mohab","123","SA" );
 
+            //Console.WriteLine(authenticationService.AuthenticateUser("mohab", "123"));
+            //Console.WriteLine(authenticationService.AuthorizeUser("mohab","SAssss"));
 
+            #endregion
+
+            #region MyRegion
 
             #endregion
 
