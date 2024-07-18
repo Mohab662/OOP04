@@ -1,5 +1,5 @@
-﻿using OOP04.Interfaces;
-using System.Text;
+﻿using OOP04.IClonable;
+using OOP04.Interfaces;
 
 namespace OOP04
 {
@@ -80,7 +80,7 @@ namespace OOP04
 
 
             #region Deep Copy Vs Shallow Copy [Array Of Reference Type (String)]
-            
+
             #region Shallow Copy
             //string[] Name01 = new string[] { "mohab " };
             //string[] Name02 = new string[1];
@@ -121,6 +121,7 @@ namespace OOP04
             #endregion
 
             #endregion
+
 
             #region Part 05 Deep Copy Vs Shallow Copy [Array Of Reference Type (StringBuilder)]
 
@@ -166,6 +167,48 @@ namespace OOP04
             #endregion
 
             #endregion
+
+            Employee employee01 = new Employee()
+            {
+                Id = 1,
+                Name = "mohab",
+                Salary = 5000,
+                Department = new Department
+                {
+                    Id = 150,
+                    Name = "AR"
+                }
+            };
+            Employee employee02 = new Employee()
+            {
+                Id = 2,
+                Name = "Belkan",
+                Salary = 5000,
+                Department = new Department
+                {
+                    Id = 100,
+                    Name = "HR"
+                }
+            };
+            Console.WriteLine($"Hash code of employee01 = {employee01.GetHashCode()} ");
+            Console.WriteLine($"Hash code of employee02 = {employee02.GetHashCode()} ");
+
+            Employee employee03 = employee01; // shallow copy
+
+            employee03 = (Employee)employee01.Clone(); // Deep copy
+
+            Console.WriteLine("After Deep Copy");
+            Console.WriteLine($"Hash code of employee01 = {employee01.GetHashCode()} ");
+            Console.WriteLine($"Hash code of employee03 = {employee03.GetHashCode()} ");
+
+            employee03.Department.Name = "SR";
+
+            Console.WriteLine(employee01);
+            Console.WriteLine(employee03);
+
+
+
         }
+          
     }
 }
