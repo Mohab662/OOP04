@@ -168,43 +168,63 @@ namespace OOP04
 
             #endregion
 
-            Employee employee01 = new Employee()
-            {
-                Id = 1,
-                Name = "mohab",
-                Salary = 5000,
-                Department = new Department
-                {
-                    Id = 150,
-                    Name = "AR"
-                }
-            };
-            Employee employee02 = new Employee()
-            {
-                Id = 2,
-                Name = "Belkan",
-                Salary = 5000,
-                Department = new Department
-                {
-                    Id = 100,
-                    Name = "HR"
-                }
-            };
-            Console.WriteLine($"Hash code of employee01 = {employee01.GetHashCode()} ");
-            Console.WriteLine($"Hash code of employee02 = {employee02.GetHashCode()} ");
+            #region Interfaces - ICloneable
+            //Employee employee01 = new Employee()
+            //{
+            //    Id = 1,
+            //    Name = "mohab",
+            //    Salary = 5000,
+            //    Department = new Department
+            //    {
+            //        Id = 150,
+            //        Name = "AR"
+            //    }
+            //};
+            //Employee employee02 = new Employee()
+            //{
+            //    Id = 2,
+            //    Name = "Belkan",
+            //    Salary = 5000,
+            //    Department = new Department
+            //    {
+            //        Id = 100,
+            //        Name = "HR"
+            //    }
+            //};
+            //Console.WriteLine($"Hash code of employee01 = {employee01.GetHashCode()} ");
+            //Console.WriteLine($"Hash code of employee02 = {employee02.GetHashCode()} ");
 
-            Employee employee03 = employee01; // shallow copy
+            //Employee employee03 = employee01; // shallow copy
 
-            employee03 = (Employee)employee01.Clone(); // Deep copy
+            //employee03 = (Employee)employee01.Clone(); // Deep copy
 
-            Console.WriteLine("After Deep Copy");
-            Console.WriteLine($"Hash code of employee01 = {employee01.GetHashCode()} ");
-            Console.WriteLine($"Hash code of employee03 = {employee03.GetHashCode()} ");
+            //Console.WriteLine("After Deep Copy");
+            //Console.WriteLine($"Hash code of employee01 = {employee01.GetHashCode()} ");
+            //Console.WriteLine($"Hash code of employee03 = {employee03.GetHashCode()} ");
 
-            employee03.Department.Name = "SR";
+            //employee03.Department.Name = "SR";
 
-            Console.WriteLine(employee01);
-            Console.WriteLine(employee03);
+            //Console.WriteLine(employee01);
+            //Console.WriteLine(employee03);
+            #endregion
+
+            #region Built-In Interface ICompareable
+            //int[] Numbers = { 7, 5, 3, 15, 7, 8, 64, 6, 56 };
+
+            //Array.Sort(Numbers);
+
+            //Employee[] employees =
+            //{
+            //    new Employee(){Id=10,Name="mohab",Salary=3000 },
+            //     new Employee(){Id=101,Name="Nagy",Salary=10000 },
+            //      new Employee(){Id=150,Name="Belkan",Salary=8000 }
+            //};
+            //Array.Sort(employees);
+            //foreach (var item in employees)
+            //{
+            //    Console.WriteLine(item);
+            //} 
+            #endregion
 
 
 
