@@ -1,8 +1,5 @@
-﻿using OOP04.IClonable;
-using OOP04.Interfaces;
-using OOP04.Interfaces_EX2;
-using OOP04.Interfaces_Q01;
-using OOP04.Interfaces_Q02;
+﻿using OOP04.Interfaces;
+using OOP04.Interfaces_Q03;
 
 namespace OOP04
 {
@@ -287,7 +284,18 @@ namespace OOP04
 
             #endregion
 
-            #region MyRegion
+            #region Question 03:
+
+            //INotificationService emailService = new EmailNotificationService();
+            //INotificationService smsService = new SmsNotificationService();
+            //INotificationService pushService = new PushNotificationService();
+
+            //string recipient = "mohabmbelkan.com";
+            //string message = "This is  notification.";
+
+            //emailService.SendNotification(recipient, message);
+            //smsService.SendNotification(recipient, message);
+            //pushService.SendNotification(recipient, message);
 
             #endregion
 
